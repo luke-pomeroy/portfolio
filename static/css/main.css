@@ -1319,7 +1319,7 @@ header .logo a {
 	width: 100%;
 	height: 100%;
 	background: #111111;
-	opacity: .85;
+	opacity: .65;
 }
 
 .intro-content {
@@ -1435,7 +1435,7 @@ header .logo a {
 		font-size: 7.6rem;
 	}
 	.intro-social {
-		font-size: 4rem;
+		font-size: 5rem;
 	}
 	.intro-social li {
 		margin: 0 15px;
@@ -1455,7 +1455,7 @@ header .logo a {
 		font-size: 1.3rem;
 	}
 	.intro-social {
-		font-size: 2.5rem;
+		font-size: 4rem;
 	}
 	.intro-social li {
 		margin: 0 10px;
@@ -1483,9 +1483,7 @@ header .logo a {
 	.intro-content .intro-position span::before, .intro-content .intro-position span::after {
 		display: none !important;
 	}
-	.intro-social {
-		font-size: 2.4rem;
-	}
+
 }
 
 
@@ -1498,7 +1496,7 @@ header .logo a {
 #about {
 	background: #FFFFFF;
 	padding-top: 6rem;
-	padding-bottom: 7rem;
+	padding-bottom: 4rem;
 }
 #about .section-intro {
 	margin-bottom: 3rem;
@@ -1530,27 +1528,32 @@ header .logo a {
 
 
 .intro-info {
-	margin-top: 4.2rem;
+	margin-top: 1rem;
 	margin-right: -30px;
 	margin-left: -30px;
 }
 .intro-info img {
-	height: 10rem;
-	width: 10rem;
+	height: 14rem;
+	width: 14rem;
 	border-radius: 50%;
 	margin: .9rem 0 0 0;
 	float: left;
 }
 .intro-info .lead {
 	text-align: left;
-	padding-left: 13rem;
+	padding-top: 4rem;
+	padding-left: 20rem;
 }
 
 .about-content {
 	position: relative;
 	text-align: left;
-	max-width: 850px;
+	max-width: 900px;
 	margin-bottom: 3.6rem;
+}
+.about-content p {
+	text-align: justify;
+	text-justify: inter-character;
 }
 .about-content h3 {
 	font-family: "poppins-bold", sans-serif;
@@ -1608,13 +1611,13 @@ header .logo a {
 }
 @media only screen and (max-width:768px) {
 	.intro-info img {
-		height: 10rem;
-		width: 10rem;
+		height: 12rem;
+		width: 12rem;
 	}
 	.intro-info .lead {
-		padding-left: 11rem;
+		padding-left: 15rem;
 	}
-	.about-content h3 {
+	.about-content h5 {
 		text-align: center;
 	}
 	.about-content .info-list, .about-content .skill-bars {
@@ -1634,14 +1637,14 @@ header .logo a {
 		gap: 15px;
 		grid-template-columns: repeat(3, 1fr);
 	}
-	
+
 	.intro-info {
 		text-align: center;
 		margin-top: 3rem;
 	}
 	.intro-info img {
-		height: 8rem;
-		width: 8rem;
+		height: 12rem;
+		width: 12rem;
 		float: none;
 		display: inline-block;
 	}
@@ -1649,6 +1652,7 @@ header .logo a {
 		padding-left: 0;
 		text-align: center;
 	}
+	
 }
 
 /** 
@@ -2168,8 +2172,9 @@ header .logo a {
 }
 #skills .section-intro p {
 	color: white;
+	font-family: "poppins-regular", sans-serif;
+	font-size: 1.6rem;
 	font-weight: 550;
-	font-size: 13;
 	font-style: wrap;
 	text-shadow: 0 1px 0 black;
 }
@@ -2456,6 +2461,9 @@ header .logo a {
 .contact-info a {
 	color: #6e6e6e;
 }
+.contact-info a[href]:hover, .contact-info a[href] i:hover  {
+	color: #cc005f;
+}
 
 
 /**
@@ -2539,7 +2547,7 @@ footer .social {
 }
 footer .footer-social {
 	display: inline-block;
-	font-size: 2.1rem;
+	font-size: 5rem;
 	margin: 0;
 	padding: 0;
 	position: relative;
