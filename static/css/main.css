@@ -1505,16 +1505,14 @@ header .logo a {
 }
 
 #about .tech{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: flex-start;
+	display: grid;
 	gap: 18px;
-	flex-wrap: wrap;
+	grid-template-columns: repeat(4, 1fr);
 	padding-left: 4px;
 	padding-right: 4px;
 	text-align: center;
 	margin-top: 10px;
+	max-width: 90vw;
 }
 
 #about .tech-item{
@@ -1525,8 +1523,9 @@ header .logo a {
 }
 
 #about .tech-item img{
-	max-height: 76px;
-	height: 76px;
+	max-width: 76px;
+	width: 100%;
+	height: auto;
 }
 
 
@@ -1630,6 +1629,12 @@ header .logo a {
 	}
 }
 @media only screen and (max-width:600px) {
+	
+	#about .tech{
+		gap: 15px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+	
 	.intro-info {
 		text-align: center;
 		margin-top: 3rem;
