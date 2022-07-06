@@ -1409,7 +1409,7 @@ header .logo a {
 	width: 100%;
 	left: 0;
 	bottom: 7.2rem;
-	font-size: 3.3rem;
+	font-size: 5rem;
 	margin: 0;
 	padding: 0;
 }
@@ -1435,7 +1435,7 @@ header .logo a {
 		font-size: 7.6rem;
 	}
 	.intro-social {
-		font-size: 3rem;
+		font-size: 4rem;
 	}
 	.intro-social li {
 		margin: 0 15px;
@@ -2138,6 +2138,7 @@ header .logo a {
 #skills .overlay {
 	position: absolute;
 	top: 0;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
