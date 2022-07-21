@@ -28,7 +28,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env('DEBUG')
+DEBUG = os.environ['DEBUG'] == 'True'
 
 ALLOWED_HOSTS: List[str] = env('ALLOWED_HOSTS')
 
@@ -61,7 +61,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,"templates"),
+            os.path.join(BASE_DIR,'templates'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {

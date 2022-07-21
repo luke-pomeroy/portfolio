@@ -2141,7 +2141,7 @@ header .logo a {
 	-moz-background-size: cover;
 	background-size: cover;
 	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-bottom: 2rem;
 	color: white;
 	position: relative;
 }
@@ -2563,6 +2563,9 @@ footer .footer-social li {
 }
 footer .footer-social li a {
 	color: #FFFFFF;
+}
+.footer-social li a:hover, .footer-social li a:focus {
+	color: #cc005f;
 }
 footer .copyright span {
 	display: inline-block;

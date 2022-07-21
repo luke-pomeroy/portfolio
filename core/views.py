@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from core.models import *
+from django.http import HttpResponseRedirect
 
 def index(request):
     projects = Project.objects.filter(current=True)
@@ -16,3 +17,7 @@ def index(request):
         'key_skills': key_skills,
     }
     return render(request, 'core/index.html', context)
+
+def githb(request):
+    return HttpResponseRedirect("https://github.com/whyspark")
+
