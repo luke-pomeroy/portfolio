@@ -32,6 +32,7 @@ DEBUG = os.environ['DEBUG'] == 'True'
 
 ALLOWED_HOSTS: List[str] = env('ALLOWED_HOSTS')
 
+ADMINS = [('Luke', 'lukepomeroy@hotmail.co.uk')]
 
 # Application definition
 
