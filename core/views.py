@@ -23,14 +23,7 @@ def index(request):
         'courses': courses,
         'key_skills': key_skills,
     }
-    return render(request, 'core/index.html', context)
-
-def postest(request):
-    
-    context = {
-
-    }
-    return render(request, 'core/postest.html', context)    
+    return render(request, 'core/index.html', context) 
 
 def githb(request):
     return HttpResponseRedirect("https://github.com/whyspark")

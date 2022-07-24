@@ -8,6 +8,5 @@ urlpatterns = [
     path('test', views.index, name = 'index'),
     path('sendmail', views.send_email, name='sendmail'),
     path('', views.githb, name = 'githb'),
-    path('postest', views.postest, name='postest'),
 ]
 
