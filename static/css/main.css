@@ -1908,6 +1908,18 @@ header .logo a {
 	transform: scale(1.05);
 }
 
+#portfolio .folio-item.feature .overlay {
+	background: rgba(0, 0, 0, 0.8);
+}
+#portfolio .folio-item.feature .folio-item-cell {
+	left: 0;
+}
+#portfolio .folio-item.feature img {
+	-webkit-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
 /**
  * responsive:
  * portfolio
@@ -1934,7 +1946,7 @@ header .logo a {
  * ------------------------------------------------------------------
  */
 .popup-modal {
-	max-width: 800px;
+	max-width: 500px;
 	background: #FFFFFF;
 	position: relative;
 	margin: 0 auto;

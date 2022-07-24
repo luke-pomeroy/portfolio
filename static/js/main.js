@@ -25,6 +25,19 @@
   	})
 
 
+	/*---------------------------------------------------- */
+  	/* Breakpoints
+  	------------------------------------------------------ */
+	breakpoints({
+		default:   ['1681px',   null       ],
+		xlarge:    ['1281px',   '1680px'   ],
+		large:     ['981px',    '1280px'   ],
+		medium:    ['737px',    '980px'    ],
+		small:     ['481px',    '736px'    ],
+		xsmall:    ['361px',    '480px'    ],
+		xxsmall:   [null,       '360px'    ]
+	});
+
   	/*---------------------------------------------------- */
   	/* FitText Settings
   	------------------------------------------------------ */
@@ -113,7 +126,26 @@
 		});
 
 	});
+    
+	
+	/*---------------------------------------------------- */
+	/*	Scrollex on folio-items for mobile and tablet devices
+	------------------------------------------------------ */
+	breakpoints.on('<=medium', function() {
 
+		$('[id^=folio-item-]').scrollex({
+			mode: 'middle',
+			top: '10%',
+    		bottom: '10%',
+			enter: function() {
+				$(this).addClass('feature');		
+			},
+			leave: function() {
+				$(this).removeClass('feature');
+			}
+		  });
+
+	});
 
 	/*----------------------------------------------------*/
 	/*	Modal Popup
@@ -212,58 +244,64 @@
 	$('input, textarea, select').placeholder()  
 
 
-  	/*---------------------------------------------------- */
+	/*---------------------------------------------------- */
 	/*	contact form
 	------------------------------------------------------ */
+	function getCookies() {
+		const REGEXP = /([\w\.]+)\s*=\s*(?:"((?:\\"|[^"])*)"|(.*?))\s*(?:[;,]|$)/g;
+		let cookies = {};
+		let match;
+		while( (match = REGEXP.exec(document.cookie)) !== null ) {
+		  let value = match[2] || match[3];
+		  cookies[match[1]] = decodeURIComponent(value);
+		}
+		return cookies;
+	}
+	
+	var btn = $('#submit_btn');
+	btn.on('click', function(e){
+	  e.preventDefault();
+	  var $form = $('#contactForm');
+	  var sLoader = $('#submit-loader');
+	  const csrftoken = getCookies('csrftoken');
 
-	/* local validation */
-	$('#contactForm').validate({
+      // check if the input is valid using a 'valid' property
+	  if (!$form.validate().form()) {
+		return false;
+	  }
 
-		/* submit via ajax */
-		submitHandler: function(form) {
+	  $.ajax({      	
+	    type: "POST",
+	    url: "sendmail",
+	    data: $($form).serialize(),
+	    beforeSend: function() { 
+		  sLoader.fadeIn(); 
+	    },
+	    success: function(msg) {
 
-			var sLoader = $('#submit-loader');
+		  // Message was sent
+		  if (msg == 'OK') {
+		  	  sLoader.fadeOut(); 
+		      $('#message-warning').hide();
+		      $('#contactForm').fadeOut();
+			  $('#contactForm').trigger('reset');
+		      $('#message-success').fadeIn();   
+		  }
+		  // There was an error
+		  else {
+			  sLoader.fadeOut(); 
+		      $('#message-warning').html(msg);
+			  $('#message-warning').fadeIn();
+		  }
 
-			$.ajax({      	
-
-		      type: "POST",
-		      url: "static/inc/sendEmail.php",
-		      data: $(form).serialize(),
-		      beforeSend: function() { 
-
-		      	sLoader.fadeIn(); 
-
-		      },
-		      success: function(msg) {
-
-	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
-	            }
-
-		      },
-		      error: function() {
-
-		      	sLoader.fadeOut(); 
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
-
-		      }
-
-	      });     		
-  		}
-
-	});
-
+	    },
+	    error: function() {
+		  sLoader.fadeOut(); 
+		  $('#message-warning').html("Something went wrong. Please try again.");
+		  $('#message-warning').fadeIn();
+	    }
+	  });  
+    });     		
 
  	/*----------------------------------------------------- */
   	/* Back to top
