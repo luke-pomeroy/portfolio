@@ -32,7 +32,7 @@ DEBUG = os.environ['DEBUG'] == 'True'
 
 ALLOWED_HOSTS: List[str] = env('ALLOWED_HOSTS')
 
-ADMINS = [('Luke', 'lukepomeroy@hotmail.co.uk')]
+ADMINS = [('Luke', 'lukepomeroy@hotmail.co.uk'),]
 
 # Application definition
 
@@ -138,6 +138,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email settings
 DEFAULT_FROM_EMAIL = 'luketpomeroy@gmail.com'
+SERVER_EMAIL = 'luketpomeroy@gmail.com'
 EMAIL_HOST = env('EMAIL_HOST')
 EMAIL_PORT = env('EMAIL_PORT')
 EMAIL_HOST_USER = env('EMAIL_HOST_USER')
