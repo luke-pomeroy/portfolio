@@ -1311,6 +1311,9 @@ header .logo a {
 	display: table;
 	position: relative;
 	text-align: center;
+	-webkit-transform: translateY(0);
+	-ms-transform: translateY(0);
+	transform: translateY(0);
 }
 .intro-overlay {
 	position: absolute;

@@ -25,6 +25,13 @@ def index(request):
     }
     return render(request, 'core/index.html', context)
 
+def postest(request):
+    
+    context = {
+
+    }
+    return render(request, 'core/postest.html', context)    
+
 def githb(request):
     return HttpResponseRedirect("https://github.com/whyspark")
 
