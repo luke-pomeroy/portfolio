@@ -78,8 +78,8 @@
 
 		<div class="col-six tab-full">
 			<p>
-				I’m a self-starter with a curious and eager interest in technology. I’ve worked in back-end systems development roles within museums for over ten years. 
-				I’m passionate about learning new technologies and programming languages, and get satisfaction from making and implementing real tools that really solve end-users problems 
+				I’m a self-starter with a passion for technology, problem solving and creativity. I’ve worked in systems development roles within museums for over ten years. 
+				I enjoy learning new technologies and programming languages, and get satisfaction from making and implementing real tools that really solve end-users problems 
 				in creative ways. I also enjoy creating IoT devices using Arduino microcontrollers and 3D printing, 
 				as well as creating applications using web application frameworks such as Django to interface with these devices.
 			</p>
@@ -170,7 +170,7 @@
 					</div>
 
 					<div class="link-box">
-						<a href="{{ project.git_url }}">GitHub</a>
+						<a href="{{ project.git_url }}">{% if project.git_url %}More{% endif %}</a>
 						<a href="#" class="popup-modal-dismiss">Close</a>
 					</div>		      
 
