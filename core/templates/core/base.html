@@ -1,4 +1,6 @@
 {% load static %}
+{% load core_extras %}
+
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
 <!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
@@ -49,5 +51,15 @@
 	<script src="{% static 'js/breakpoints.min.js' %}"></script>
 	<script src="{% static 'js/plugins.js' %}"></script>
 	<script src="{% static 'js/main.js' %}"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={% get_env_var 'GOOGLE_ANALYTICS_TAGID' %}"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', "{% get_env_var 'GOOGLE_ANALYTICS_TAGID' %}");
+</script>
 
 </body>
