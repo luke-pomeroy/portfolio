@@ -135,8 +135,8 @@
 
 		$('[id^=folio-item-]').scrollex({
 			mode: 'middle',
-			top: '10%',
-    		bottom: '10%',
+			top: '-10%',
+    		bottom: '-10%',
 			enter: function() {
 				$(this).addClass('feature');		
 			},
