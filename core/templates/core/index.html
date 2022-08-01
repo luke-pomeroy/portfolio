@@ -278,6 +278,49 @@
    
    <div class="row resume-timeline">
 
+		<div class="col-twelve resume-header">
+
+			<h2>Training Courses and Certifications</h2>
+
+		</div> <!-- /resume-header -->
+
+		<div class="col-twelve">
+
+			<div class="timeline-wrap">
+
+				{% for course in courses %}
+					<div class="timeline-block">
+
+						<div class="timeline-ico">
+							<i class="fa fa-book"></i>
+						</div>
+
+						<div class="timeline-header">
+							<h3>{{ course.title }}</h3>
+							<p>{{ course.start_date }}</p>
+						</div>
+
+						<div class="timeline-content">
+							<h4>{{ course.organisation }}</h4>
+							<p>
+								{% for point in course.experiencepoint_set.all %}
+									{{ point.text }}
+								{% endfor %}
+							</p>
+						</div>
+
+					</div> <!-- /timeline-block -->
+
+				{% endfor %}
+
+			</div> <!-- /timeline-wrap -->   			
+
+		</div> <!-- /col-twelve -->
+
+	</div> <!-- /resume-timeline -->
+
+   <div class="row resume-timeline">
+
 	   <div class="col-twelve resume-header">
 
 		   <h2>Education</h2>
