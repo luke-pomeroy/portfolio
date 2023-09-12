@@ -2,9 +2,9 @@
 {% load static %}
 {% block page_content %}
 
-	<!-- header 
+	<!-- header
    ================================================== -->
-   <header>   	
+   <header>
 	<div class="row">
 
 		<div class="top-bar">
@@ -14,21 +14,21 @@
 					 <li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
 					 <li><a class="smoothscroll"  href="#about" title="">About</a></li>
 					 <li><a class="smoothscroll"  href="#portfolio" title="">Projects</a></li>
-					 <li><a class="smoothscroll"  href="#skills" title="">Key Skills</a></li>	
+					 <li><a class="smoothscroll"  href="#skills" title="">Key Skills</a></li>
 					 <li><a class="smoothscroll"  href="#resume" title="">CV</a></li>
-					 <li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
+					 <li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>
 				 </ul>
-			 </nav>    		
-		</div> <!-- /top-bar --> 
-		
-	</div> <!-- /row --> 		
+			 </nav>
+		</div> <!-- /top-bar -->
+
+	</div> <!-- /row -->
 </header> <!-- /header -->
 
  <!-- intro section
 ================================================== -->
-<section id="intro">   
+<section id="intro">
 
-	<div class="intro-overlay"></div>	
+	<div class="intro-overlay"></div>
 
 	<div class="intro-content">
 		<div class="row">
@@ -40,27 +40,27 @@
 
 				<p class="intro-position">
 					<span>Developer</span>
-					<span>Problem Solver</span> 
+					<span>Problem Solver</span>
 				</p>
 
 				<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
 
-			</div>  
-			
-		</div>   		 		
-	</div> <!-- /intro-content --> 
+			</div>
 
-	<ul class="intro-social">        
+		</div>
+	</div> <!-- /intro-content -->
+
+	<ul class="intro-social">
 	  <li><a href="https://www.linkedin.com/in/lukepomeroy/" class="fa fa-linkedin"><span class="label"></i></a></li>
 	  <li><a href="https://github.com/whyspark" class="fa fa-github"><span class="label"></i></a></li>
-   </ul> <!-- /intro-social -->      	
+   </ul> <!-- /intro-social -->
 
 </section> <!-- /intro -->
 
 
 <!-- about section
 ================================================== -->
-<section id="about">  
+<section id="about">
 
 	<div class="row section-intro">
 		<div class="col-twelve">
@@ -69,19 +69,20 @@
 			<div class="intro-info">
 				<img src="{% static 'images/profile-pic.jpg' %}" alt="Profile Picture">
 				<p class="lead">I'm Luke, a self-taught developer and technology enthusiast</p>
-			</div>   			
+			</div>
 
-		</div>   		
+		</div>
 	</div> <!-- /section-intro -->
 
 	<div class="row about-content">
 
 		<div class="col-six tab-full">
 			<p>
-				I’m a self-starter with a passion for technology, problem solving and creativity. I’ve worked in systems development roles within museums for over ten years. 
-				I enjoy learning new technologies and programming languages, and get satisfaction from making and implementing real tools that really solve end-users problems 
-				in creative ways. I also enjoy creating IoT devices using Arduino microcontrollers and 3D printing, 
-				as well as creating applications using web application frameworks such as Django to interface with these devices.
+				I’m a highly motivated self-starter with a passion for technology, problem solving and creativity.
+				I’ve worked in systems development roles within museums for over ten years, where I developed a deep interest in software engineering.
+				I enjoy learning new programming languages, and exploring new technologies and frameworks.
+				I get satisfaction from making and implementing real tools that solve end-users problems in creative ways.
+				In my free time, I program Arduino microcontrollers and create web applications using frameworks such as Django and Flask.
 			</p>
 		</div>
 
@@ -99,8 +100,8 @@
 				<div class="tech-item"><img src="{% static 'icons/aws-svgrepo-com.svg' %}"/><h4>AWS</h4></div>
 				<div class="tech-item"><img src="{% static 'icons/oracle-cloud.svg' %}"/><h4>Oracle Cloud</h4></div>
 				<div class="tech-item"><img src="{% static 'icons/apache-svgrepo-com.svg' %}"/><h4>Apache</h4></div>
-				<div class="tech-item"><img src="{% static 'icons/arduino-svgrepo-com.svg' %}"/><h4>Arduino</h4></div>                        
-			</div>	
+				<div class="tech-item"><img src="{% static 'icons/arduino-svgrepo-com.svg' %}"/><h4>Arduino</h4></div>
+			</div>
 		</div>
 
 	</div>
@@ -109,10 +110,10 @@
 		<div class="col-twelve">
 			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Contact Me</a>
 			<a href="{% static 'Luke Pomeroy - CV 2022.pdf' %}" title="Download CV" class="button button-primary" download>Download CV</a>
-		</div>   		
+		</div>
 	</div>
 
-</section> <!-- /process-->    
+</section> <!-- /process-->
 
  <!-- Portfolio Section
 ================================================== -->
@@ -123,8 +124,8 @@
 
 			<h1>Projects</h1>
 
-		</div>   		
-	</div> <!-- /section-intro--> 
+		</div>
+	</div> <!-- /section-intro-->
 
 	<div class="row portfolio-content">
 
@@ -136,43 +137,43 @@
 				<div class="bgrid folio-item" id="folio-item-{{ forloop.counter }}">
 					<div class="item-wrap">
 						<img src="{% static project.image %}" alt="Liberty">
-						<a href="#modal-{{ forloop.counter }}" class="overlay">	                  	           
+						<a href="#modal-{{ forloop.counter }}" class="overlay">
 							<div class="folio-item-table">
 								<div class="folio-item-cell">
 											<h3 class="folio-title">{{ project.title }}</p>
-											<div class="icon"><i class="fa fa-info-circle"></i></div>	 					    
+											<div class="icon"><i class="fa fa-info-circle"></i></div>
 											<span class="folio-types">
 												{{project.technology}}
 											</span>
-											
-										</div>	                      	
-							</div>                    
+
+										</div>
+							</div>
 						</a>
-					</div>	               
+					</div>
 				</div> <!-- /folio-item -->
 			{% endfor %}
- 
+
 
 			 <!-- modal popups - begin
 			 ============================================================= -->
 			{% for project in projects %}
-				<div id="modal-{{ forloop.counter }}" class="popup-modal slider mfp-hide">	
+				<div id="modal-{{ forloop.counter }}" class="popup-modal slider mfp-hide">
 
 					<div class="media">
 						<img src="{% static project.image %}" alt="" />
-					</div>      	
+					</div>
 
 					<div class="description-box">
-						<h4>{{ project.title }}</h4>		      
+						<h4>{{ project.title }}</h4>
 						<p>{{ project.description }}</p>
 
-						<div class="categories">{{project.technology}}</div>			               
+						<div class="categories">{{project.technology}}</div>
 					</div>
 
 					<div class="link-box">
 						<a href="{{ project.git_url }}">{% if project.git_url %}More{%else%}	{% endif %}</a>
 						<a href="#" class="popup-modal-dismiss">Close</a>
-					</div>		      
+					</div>
 
 				</div> <!-- /modal-01 -->
 
@@ -181,13 +182,13 @@
 				<!-- modal popups - end
 			 ============================================================= -->
 
-		  </div> <!-- /portfolio-wrapper --> 
+		  </div> <!-- /portfolio-wrapper -->
 
-		</div>  <!-- /twelve -->   
+		</div>  <!-- /twelve -->
 
-	</div> <!-- /portfolio-content --> 
-	 
- </section> <!-- /portfolio --> 
+	</div> <!-- /portfolio-content -->
+
+ </section> <!-- /portfolio -->
 
  <!-- skills Section
 ================================================== -->
@@ -215,10 +216,10 @@
 					<p>Ability to communicate clearly and work collaboratively as part of a team</p>
 			</div>
 
-		</div>   		
+		</div>
 	</div> <!-- /section-intro -->
-	 
-</section> <!-- /skills -->	
+
+</section> <!-- /skills -->
 
 <!-- resume Section
 ================================================== -->
@@ -229,8 +230,8 @@
 
 		   <h1>CV</h1>
 
-	   </div>   		
-   </div> <!-- /section-intro--> 
+	   </div>
+   </div> <!-- /section-intro-->
 
    <div class="row resume-timeline">
 
@@ -270,12 +271,12 @@
 				   </div> <!-- /timeline-block -->
 			   {% endfor %}
 
-		   </div> <!-- /timeline-wrap -->   			
+		   </div> <!-- /timeline-wrap -->
 
 	   </div> <!-- /col-twelve -->
-	   
+
    </div> <!-- /resume-timeline -->
-   
+
    <div class="row resume-timeline">
 
 		<div class="col-twelve resume-header">
@@ -313,7 +314,7 @@
 
 				{% endfor %}
 
-			</div> <!-- /timeline-wrap -->   			
+			</div> <!-- /timeline-wrap -->
 
 		</div> <!-- /col-twelve -->
 
@@ -356,15 +357,15 @@
 
 			   {% endfor %}
 
-		   </div> <!-- /timeline-wrap -->   			
+		   </div> <!-- /timeline-wrap -->
 
 	   </div> <!-- /col-twelve -->
-	   
+
    </div> <!-- /resume-timeline -->
 
 </section> <!-- /features -->
- 
- 
+
+
 <!-- contact
 ================================================== -->
  <section id="contact">
@@ -372,7 +373,7 @@
 	 <div class="row section-intro">
 		<div class="col-twelve">
 			<h1>Contact</h1>
-		</div> 
+		</div>
 	</div> <!-- /section-intro -->
 
 	<div class="row contact-form">
@@ -391,16 +392,16 @@
 				</div>
 			   <div class="form-field">
 						 <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
-				</div>                       
+				</div>
 			   <div class="form-field">
 					  <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
 			    </div>
 			  		 <!-- contact-warning -->
-			   <div id="message-warning">            	
-			    </div>                                  
+			   <div id="message-warning">
+			    </div>
 			  <div class="form-field">
 				  <div id="submit-loader">
-					 <div class="text-loader">Sending...</div>                             
+					 <div class="text-loader">Sending...</div>
 						  <div class="s-loader">
 								   <div class="bounce1"></div>
 								   <div class="bounce2"></div>
@@ -416,7 +417,7 @@
 			  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
 			</div>
 	  </div> <!-- /col-twelve -->
-		
+
 	</div> <!-- /contact-form -->
 
 	<div class="row contact-info">
@@ -458,9 +459,9 @@
 			</p>
 
 		</div>
-		
+
 	</div> <!-- /contact-info -->
-	 
+
  </section> <!-- /contact -->
 
 
@@ -472,24 +473,24 @@
 
 		  <div class="col-six tab-full pull-right social">
 
-			  <ul class="footer-social">        
+			  <ul class="footer-social">
 				<li><a href="https://www.linkedin.com/in/lukepomeroy/" class="fa fa-linkedin"><span class="label"></a></li>
 				<li><a href="https://github.com/whyspark" class="fa fa-github"><span class="label"></a></li>
-			</ul> 
-			   
+			</ul>
+
 	   </div>
 
 	   <div class="col-six tab-full">
 		   <div class="copyright">
-				 <span>© Copyright Luke Pomeroy</span> 
-				 <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>	         	
-			  </div>		                  
+				 <span>© Copyright Luke Pomeroy</span>
+				 <span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>
+			  </div>
 		   </div>
 
 		   <div id="go-top">
 			  <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
 		   </div>
 
-	   </div> <!-- /row -->     	
-</footer>  
+	   </div> <!-- /row -->
+</footer>
 {% endblock page_content %}
