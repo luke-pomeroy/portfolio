@@ -1,4 +1,3 @@
-from http.client import responses
 from django.shortcuts import render
 from core.models import *
 from django.http import HttpResponse, HttpResponseRedirect
