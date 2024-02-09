@@ -122,112 +122,6 @@
 
 </section> <!-- /process-->
 
- <!-- Portfolio Section
-================================================== -->
- <section id="portfolio">
-
-	 <div class="row section-intro">
-		<div class="col-twelve">
-
-			<h1>Projects</h1>
-
-		</div>
-	</div> <!-- /section-intro-->
-
-	<div class="row portfolio-content">
-
-		<div class="col-twelve">
-
-			<!-- portfolio-wrapper -->
-		  <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
-			{% for project in projects %}
-				<div class="bgrid folio-item" id="folio-item-{{ forloop.counter }}">
-					<div class="item-wrap">
-						<img src="{% static project.image %}" alt="Liberty">
-						<a href="#modal-{{ forloop.counter }}" class="overlay">
-							<div class="folio-item-table">
-								<div class="folio-item-cell">
-											<h3 class="folio-title">{{ project.title }}</p>
-											<div class="icon"><i class="fa fa-info-circle"></i></div>
-											<span class="folio-types">
-												{{project.technology}}
-											</span>
-
-										</div>
-							</div>
-						</a>
-					</div>
-				</div> <!-- /folio-item -->
-			{% endfor %}
-
-
-			 <!-- modal popups - begin
-			 ============================================================= -->
-			{% for project in projects %}
-				<div id="modal-{{ forloop.counter }}" class="popup-modal slider mfp-hide">
-
-					<div class="media">
-						<img src="{% static project.image %}" alt="project image" />
-					</div>
-
-					<div class="description-box">
-						<h4>{{ project.title }}</h4>
-						<p>{{ project.description }}</p>
-
-						<div class="categories">{{project.technology}}</div>
-					</div>
-
-					<div class="link-box">
-						<a href="{{ project.git_url }}">{% if project.git_url %}More{%else%}	{% endif %}</a>
-						<a href="#" class="popup-modal-dismiss">Close</a>
-					</div>
-
-				</div> <!-- /modal-01 -->
-
-			{% endfor %}
-
-				<!-- modal popups - end
-			 ============================================================= -->
-
-		  </div> <!-- /portfolio-wrapper -->
-
-		</div>  <!-- /twelve -->
-
-	</div> <!-- /portfolio-content -->
-
- </section> <!-- /portfolio -->
-
- <!-- skills Section
-================================================== -->
-<section id="skills">
-
-	<div class="overlay"></div>
-
-	<div class="row section-intro">
-		<div class="col-twelve">
-
-			<h1>Key Skills</h1>
-			<br>
-			<div class="col-six">
-					<p>Meticulous attention to detail, with a consistent and repeatable approach</p>
-					<p>Logical and creative approach to identifying and solving problems</p>
-					<p>Good understanding of software design, database structures and object orientated programming principles</p>
-					<p>Ability to understand client requirements and translate them into meaningful solutions that address business needs</p>
-					<p>Adaptable working style with self-initiative and the ability to learn quickly in a fast-paced dynamic environment</p>
-			</div>
-			<div class="col-six">
-					<p>Excellent ability to communicate technical concepts to nontechnical stakeholders</p>
-					<p>Understanding of the importance of documentation, version control (e.g. Git), and test driven development</p>
-					<p>Understanding of Agile development methodologies</p>
-					<p>Working with clients to gather requirements, and application of prioritisation techniques (e.g.  MoSCoW method)</p>
-					<p>Ability to communicate clearly and work collaboratively as part of a team</p>
-			</div>
-
-		</div>
-	</div> <!-- /section-intro -->
-
-</section> <!-- /skills -->
-
 <!-- resume Section
 ================================================== -->
 <section id="resume" class="grey-section">
@@ -372,6 +266,112 @@
 
 </section> <!-- /features -->
 
+
+ <!-- Portfolio Section
+================================================== -->
+<section id="portfolio">
+
+	<div class="row section-intro">
+	   <div class="col-twelve">
+
+		   <h1>Projects</h1>
+
+	   </div>
+   </div> <!-- /section-intro-->
+
+   <div class="row portfolio-content">
+
+	   <div class="col-twelve">
+
+		   <!-- portfolio-wrapper -->
+		 <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+		   {% for project in projects %}
+			   <div class="bgrid folio-item" id="folio-item-{{ forloop.counter }}">
+				   <div class="item-wrap">
+					   <img src="{% static project.image %}" alt="Liberty">
+					   <a href="#modal-{{ forloop.counter }}" class="overlay">
+						   <div class="folio-item-table">
+							   <div class="folio-item-cell">
+										   <h3 class="folio-title">{{ project.title }}</p>
+										   <div class="icon"><i class="fa fa-info-circle"></i></div>
+										   <span class="folio-types">
+											   {{project.technology}}
+										   </span>
+
+									   </div>
+						   </div>
+					   </a>
+				   </div>
+			   </div> <!-- /folio-item -->
+		   {% endfor %}
+
+
+			<!-- modal popups - begin
+			============================================================= -->
+		   {% for project in projects %}
+			   <div id="modal-{{ forloop.counter }}" class="popup-modal slider mfp-hide">
+
+				   <div class="media">
+					   <img src="{% static project.image %}" alt="project image" />
+				   </div>
+
+				   <div class="description-box">
+					   <h4>{{ project.title }}</h4>
+					   <p>{{ project.description }}</p>
+
+					   <div class="categories">{{project.technology}}</div>
+				   </div>
+
+				   <div class="link-box">
+					   <a href="{{ project.git_url }}">{% if project.git_url %}More{%else%}	{% endif %}</a>
+					   <a href="#" class="popup-modal-dismiss">Close</a>
+				   </div>
+
+			   </div> <!-- /modal-01 -->
+
+		   {% endfor %}
+
+			   <!-- modal popups - end
+			============================================================= -->
+
+		 </div> <!-- /portfolio-wrapper -->
+
+	   </div>  <!-- /twelve -->
+
+   </div> <!-- /portfolio-content -->
+
+</section> <!-- /portfolio -->
+
+<!-- skills Section
+================================================== -->
+<section id="skills">
+
+   <div class="overlay"></div>
+
+   <div class="row section-intro">
+	   <div class="col-twelve">
+
+		   <h1>Key Skills</h1>
+		   <br>
+		   <div class="col-six">
+				   <p>Meticulous attention to detail, with a consistent and repeatable approach</p>
+				   <p>Logical and creative approach to identifying and solving problems</p>
+				   <p>Good understanding of software design, database structures and object orientated programming principles</p>
+				   <p>Ability to understand client requirements and translate them into meaningful solutions that address business needs</p>
+				   <p>Adaptable working style with self-initiative and the ability to learn quickly in a fast-paced dynamic environment</p>
+		   </div>
+		   <div class="col-six">
+				   <p>Excellent ability to communicate technical concepts to nontechnical stakeholders</p>
+				   <p>Understanding of the importance of documentation, version control (e.g. Git), and test driven development</p>
+				   <p>Understanding of Agile development methodologies</p>
+				   <p>Working with clients to gather requirements, and application of prioritisation techniques (e.g.  MoSCoW method)</p>
+				   <p>Ability to communicate clearly and work collaboratively as part of a team</p>
+		   </div>
+
+	   </div>
+   </div> <!-- /section-intro -->
+
+</section> <!-- /skills -->
 
 <!-- contact
 ================================================== -->
